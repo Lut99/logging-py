@@ -4,7 +4,7 @@
 # Created:
 #   10 Jul 2024, 20:29:35
 # Last edited:
-#   29 Jul 2024, 23:34:14
+#   29 Jul 2024, 23:48:57
 # Auto updated?
 #   Yes
 #
@@ -46,6 +46,21 @@ def _supports_color():
 
 
 ##### LIBRARY #####
+def set_debug(enable: bool):
+    """
+        Whether or not to enable debugging.
+
+        If it isn't, `pdebug()` does nothing.
+
+        # Arguments
+        - `enable`: Whether to enable debugging (True) or not (False).
+    """
+
+    global DEBUG
+    DEBUG = enable
+
+
+
 def pdebug(text: str, end: str = '\n', use_colour: Optional[bool] = None, file: TextIOWrapper = sys.stdout):
     """
         Prints a message as if it's debug statements.

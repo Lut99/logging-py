@@ -42,7 +42,11 @@ All of them have the same behaviour and arguments (roughly), except that the log
 - `use_colour`: Whether to use colour or not. Use `None` to try and deduce it automagically (default: `None`).
 - `file`: The file on which to write the message. Defaults to stdout for `pdebug` and `pinfo`, defaults to stderr for `pwarn` and `perror`.
 
-Then the script also exposes the `DEBUG`-global, which defaults to `False`. `pdebug` only does anything if `DEBUG` is set to True.
+Then the script also exposes:
+```python
+def set_debug(enable: bool)
+```
+which allows one to control whether `pdebug()` does anything. By default, does not print anything unless `set_debug(True)` is called.
 
 
 ## Contribution

@@ -9,7 +9,7 @@ Initial release.
 
 ### Added
 - `pdebug()`.
-    - Whether this function does anything depends on the `DEBUG`-global.
+    - Whether this function does anything depends on whether `set_debug()` is called with True.
 - `pinfo()`.
 - `pwarn()`.
 - `perror()`.
